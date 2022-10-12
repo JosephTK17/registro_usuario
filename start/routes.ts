@@ -24,7 +24,7 @@ const service = new UsersService();
 
 Route.group(() => {
 
-Route.get('/index', async({request,response}) => {
+Route.get('/', async({request,response}) => {
   response.send('hello')
 })
   
