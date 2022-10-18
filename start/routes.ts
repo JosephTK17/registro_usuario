@@ -50,11 +50,12 @@ Route.post('/create',async({request, response}) => {
         response.status(201).json(newUser)
     })
 
-Route.patch('/update/:id', async({request, response}) => {
+Route.patch ('/update/:id', async({request, response}) => {
 
   const { id } = request.params();
   const body = request.body();
   const user = await service.update(id, body);
+  console.log(user)
   response.json(user)
 
 })
